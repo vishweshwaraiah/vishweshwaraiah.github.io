@@ -1,4 +1,35 @@
 body {
-  height: 100vh;
+  height          : 100vh;
   background-image: linear-gradient(lightgray, white, lightblue);
+}
+
+.self_greet {
+  font-size : 5rem;
+  text-align: center;
+}
+
+.exp-container {
+  display              : grid;
+  grid-template-columns: auto auto auto;
+  background-color     : #2196F3;
+  padding              : 0.625rem;
+}
+
+.exp-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border          : 1px solid rgba(0, 0, 0, 0.8);
+  padding         : 20px;
+  font-size       : 30px;
+  text-align      : center;
+}
+
+.d-none {
+  display: none;
+}
+
+.full-width {
+  display : block;
+  overflow: auto;
+  width   : 100vw;
+  height  : 100vh;
 }
