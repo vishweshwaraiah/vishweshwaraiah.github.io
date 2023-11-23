@@ -1,3 +1,3 @@
-# vishweshwaraiah.github.io
+# vish.github.io
 
 Vishweshwarayya's Portfolio
