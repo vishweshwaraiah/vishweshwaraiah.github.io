@@ -1,0 +1,1 @@
+import{_ as e,o as a,c as s,a as t,t as _}from"./index-4a439d46.js";const c={class:"about_dev"},o="Vishweshwarayya Kj",n={__name:"AboutDev",setup(r){return(d,p)=>(a(),s("div",c,[t("h1",{class:"dev_name"},_(o))]))}},v=e(n,[["__scopeId","data-v-714cec7a"]]);export{v as default};
