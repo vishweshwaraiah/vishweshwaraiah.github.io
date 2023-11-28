@@ -1,0 +1,95 @@
+@media print {
+
+    @page {
+        page: wide;
+        margin: 0;
+        size: A4;
+        width: 100%;
+        height: auto;
+    }
+
+    aside,
+    nav,
+    iframe,
+    .menu {
+        display: none;
+    }
+
+    footer,
+    #footer {
+        display: none;
+        position: fixed;
+        bottom: 0;
+    }
+
+    header,
+    #header {
+        display: none;
+        position: fixed;
+        top: 0;
+    }
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        font-size: 8pt;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+
+        .main {
+            &_sidebar {
+                display: block;
+                height: 100%;
+            }
+
+            &_content {
+                display: block;
+                height: 100%;
+            }
+        }
+
+        .cover_letter {
+            font-size: 10pt;
+        }
+
+        .print_margin {
+            margin-top: 2rem;
+            display: block;
+        }
+
+        .master_title>.exp_years {
+            margin-top: 5pt;
+        }
+
+        .svg-holder {
+            align-self: stretch;
+
+            &.is_rounded {
+                align-self: center;
+            }
+
+            &.x-small,
+            &.small {
+                height: 10pt;
+                width: 10pt;
+            }
+
+            &.small.is_rounded {
+                height: 16pt;
+                width: 16pt;
+            }
+
+            &.medium {
+                height: 14pt;
+                width: 14pt;
+            }
+
+            &.large {
+                height: 20pt;
+                width: 20pt;
+            }
+        }
+    }
+}
