@@ -13,13 +13,11 @@
     <div id="app">
       <style>
         .dev_name {
-          display: flex;
-          width: 100%;
-          flex: 1;
-          text-align: center;
-          align-items: center;
-          justify-content: center;
-          height: 90vh;
+          position: fixed; /* or absolute */
+          top: 50%;
+          left: 50%;
+          /* bring your own prefixes */
+          transform: translate(-50%, -50%);
         }
       </style>
       <h1 class="dev_name">Vishweshwarayya's Portfolio</h1>
