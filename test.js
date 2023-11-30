@@ -1,1 +1,1 @@
-alert('JavaScript works!');
+console.log('JavaScript works!');
