@@ -7,38 +7,39 @@
     <link rel="icon" href="./favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vishweshwarayya's Portfolio</title>
-    <script type="module" crossorigin src="./assets/index-e65225c7.js"></script>
-    <link rel="stylesheet" href="./assets/index-53bc2f3e.css">
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script takes the current url and converts the path and query
+      // string into just a query string, and then redirects the browser
+      // to the new url with only a query string and hash fragment,
+      // e.g. https://www.foo.tld/one/two?a=b&c=d#qwe, becomes
+      // https://www.foo.tld/?/one/two&a=b~and~c=d#qwe
+      // Note: this 404.html file must be at least 512 bytes for it to work
+      // with Internet Explorer (it is currently > 512 bytes)
+
+      // If you're creating a Project Pages site and NOT using a custom domain,
+      // then set pathSegmentsToKeep to 1 (enterprise users may need to set it to > 1).
+      // This way the code will only replace the route part of the path, and not
+      // the real directory in which the app resides, for example:
+      // https://username.github.io/repo-name/one/two?a=b&c=d#qwe becomes
+      // https://username.github.io/repo-name/?/one/two&a=b~and~c=d#qwe
+      // Otherwise, leave pathSegmentsToKeep as 0.
+      var pathSegmentsToKeep = 0;
+
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+
+    </script>
   </head>
-
-  <body>
-    <div id="app">
-      <style>
-        .app_content {
-          position: fixed;
-          background-color: #fff;
-          margin: auto;
-          left: 50%;
-          top: 50%;
-          text-align: center;
-          transform: translate(-50%, -50%);
-        }
-
-        .app_content>.title {
-          font-size: 5vw;
-        }
-
-        .app_content>.message {
-          font-size: 2vw;
-          color: red;
-        }
-      </style>
-      <div class="app_content">
-        <h1 class='title'>Vishweshwarayya's Portfolio</h1>
-        <span class='message'>If you are seeing this text for long, there must be some JavaScript error.</span>
-      </div>
-    </div>
-    
+  <body>  
   </body>
 
 </html>
