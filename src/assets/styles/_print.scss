@@ -1,0 +1,76 @@
+@media print {
+  @page wide {
+    size: a4 landscape;
+  }
+
+  @page {
+    page: wide;
+    margin: 0;
+    size: A4;
+    width: 100%;
+    height: auto;
+    float: none;
+  }
+
+  html,
+  body {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-size: 8pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    float: none;
+    background-size: cover;
+
+    aside,
+    nav,
+    iframe,
+    .menu {
+      display: none;
+    }
+
+    footer,
+    #footer {
+      display: none;
+      position: fixed;
+      bottom: 0;
+    }
+
+    header,
+    #header {
+      display: none;
+      position: fixed;
+      top: 0;
+    }
+
+    main {
+      min-height: 100%;
+    }
+
+    .cover_letter {
+      font-size: 10pt;
+    }
+
+    .print_margin {
+      margin-top: 2rem;
+      display: block;
+    }
+
+    .master_title > .exp_years {
+      margin-top: 5pt;
+    }
+
+    .personal_details {
+      &.dev_contact .contact_line,
+      &.dev_social .social_line {
+        padding: 1rem 0.5rem;
+      }
+
+      &.dev_education .education_line {
+        padding-top: 0.5rem;
+      }
+    }
+  }
+}

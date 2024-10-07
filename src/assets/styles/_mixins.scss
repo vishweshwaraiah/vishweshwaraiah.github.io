@@ -1,0 +1,371 @@
+@mixin mediaQuery($keys...) {
+  // map holding breakpoint values
+  $mobileMin: 200px;
+  $mobileMax: 600px;
+  $tabletMin: 600px;
+  $tabletMax: 768px;
+  $laptopMin: 768px;
+  $laptopMax: 960px;
+  $desktopMin: 960px;
+  $desktopMax: 1200px;
+  $monitorMin: 1200px;
+  $monitorMax: 1800px;
+
+  @each $key in $keys {
+    @if ($key ==mobile) {
+      @media only screen and (min-width: $mobileMin) and (max-width: $mobileMax) {
+        @content;
+      }
+    }
+
+    @if ($key ==tablet) {
+      @media only screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+        @content;
+      }
+    }
+
+    @if ($key ==laptop) {
+      @media only screen and (min-width: $laptopMin) and (max-width: $laptopMax) {
+        @content;
+      }
+    }
+
+    @if ($key ==desktop) {
+      @media only screen and (min-width: $desktopMin) and (max-width: $desktopMax) {
+        @content;
+      }
+    }
+
+    @if ($key ==monitor) {
+      @media only screen and (min-width: $monitorMin) and (max-width: $monitorMax) {
+        @content;
+      }
+    }
+  }
+}
+
+@function boxShadow($type: default, $variant: dark) {
+  // colors goes here
+  $default-color: var(--shadow-color);
+  $success-color: var(--success);
+  $info-color: var(--info);
+  $warning-color: var(--warning);
+  $danger-color: var(--danger);
+  $primary-color: var(--primary);
+  $secondary-color: var(--secondary);
+
+  // shadow values goes here
+  $linear-shadow: var(--linear-shadow);
+  $top-shadow: var(--top-shadow);
+  $bottom-shadow: var(--bottom-shadow);
+  $default-shadow: var(--default-shadow);
+  $minimal-shadow: var(--minimal-shadow);
+  $dark-shadow: var(--dark-shadow);
+  $svg-light-shadow: var(--svg-light-shadow);
+  $svg-dark-shadow: var(--svg-dark-shadow);
+  $focus-shadow: var(--focus-shadow);
+  $menu-shadow: var(--menu-shadow);
+  $notify-shadow: var(--notify-shadow);
+  $card-shadow: var(--card-shadow);
+  $card-hover-shadow: var(--card-hover-shadow);
+  $text-shadow: var(--text-shadow);
+
+  @if $type ==linear {
+    @return $linear-shadow $default-color;
+  } @else if $type ==menu {
+    @return $menu-shadow;
+  } @else if $type ==notify {
+    @return $notify-shadow $default-color;
+  } @else if $type ==svg-light {
+    @return $svg-light-shadow $secondary-color;
+  } @else if $type ==svg-dark {
+    @return $svg-dark-shadow $secondary-color;
+  } @else if $type ==dark {
+    @return $dark-shadow $default-color;
+  } @else if $type ==minimal {
+    @return $minimal-shadow $default-color;
+  } @else if $type ==focus {
+    @return $focus-shadow $default-color;
+  } @else if $type ==focus and $variant ==primary {
+    @return $focus-shadow $primary-color;
+  } @else if $type ==focus and $variant ==secondary {
+    @return $focus-shadow $secondary-color;
+  } @else if $type ==focus and $variant ==success {
+    @return $focus-shadow $success-color;
+  } @else if $type ==focus and $variant ==info {
+    @return $focus-shadow $info-color;
+  } @else if $type ==focus and $variant ==warning {
+    @return $focus-shadow $warning-color;
+  } @else if $type ==focus and $variant ==danger {
+    @return $focus-shadow $danger-color;
+  } @else if $type ==top {
+    @return $top-shadow $default-color;
+  } @else if $type ==bottom {
+    @return $bottom-shadow $default-color;
+  } @else if $type ==card {
+    @return $card-shadow $default-color;
+  } @else if $type ==card-hover {
+    @return $card-hover-shadow $default-color;
+  } @else if $type ==text {
+    @return $text-shadow $default-color;
+  } @else {
+    @return $default-shadow $default-color;
+  }
+}
+
+@function px2rem($size) {
+  $rem-px: 16;
+  $rem-size: calc($size / $rem-px);
+  @return #{$rem-size}rem;
+}
+
+@mixin headerFooters($type) {
+  width: auto;
+  color: var(--white);
+  padding: 1%;
+
+  @if $type ==header {
+    box-shadow: boxShadow(bottom);
+  } @else {
+    box-shadow: boxShadow(top);
+  }
+}
+
+@mixin headings($size) {
+  margin-bottom: calc($size/4);
+  font-weight: 500;
+  line-height: 1;
+  font-size: $size;
+}
+
+@mixin formControl($height: 40) {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--item-color);
+  background-color: var(--bg-color);
+  background-clip: padding-box;
+  border-radius: var(--radius-default);
+  transition: border-color 0.15s ease-in-out;
+  box-shadow: boxShadow();
+  height: px2rem($height);
+  min-height: px2rem($height);
+
+  &.textarea {
+    height: auto;
+  }
+
+  * {
+    line-height: 1.5;
+  }
+}
+
+@mixin cssArrow($dir) {
+  $rotateBy: 0deg;
+
+  @if $dir ==right {
+    $rotateBy: -45deg;
+  }
+
+  @if $dir ==left {
+    $rotateBy: 135deg;
+  }
+
+  @if $dir ==up {
+    $rotateBy: -135deg;
+  }
+
+  @if $dir ==down {
+    $rotateBy: 45deg;
+  }
+
+  border: solid var(--item-color);
+  border-width: 0 px2rem(3) px2rem(3) 0;
+  display: inline-block;
+  padding: px2rem(3);
+  transform: rotate($rotateBy);
+  -webkit-transform: rotate($rotateBy);
+}
+
+@mixin hideScroll {
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  /* for IE and Edge */
+  scrollbar-width: 0;
+  /* for Firefox */
+  overflow-y: scroll;
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin buttonVariant($variant: primary) {
+  $background-color: '';
+  $text-color: '';
+  $hover-color: '';
+  $disabled-color: '';
+  $border-color: '';
+
+  @if $variant ==light {
+    $background-color: var(--bg-color);
+    $text-color: var(--item-color);
+    $hover-color: var(--bg-color-hover);
+    $disabled-color: var(--bg-color-disabled);
+    $border-color: var(--bg-color-border);
+  } @else if $variant ==dark {
+    $background-color: var(--item-color);
+    $text-color: var(--bg-color);
+    $hover-color: var(--item-color-hover);
+    $disabled-color: var(--item-color-disabled);
+    $border-color: var(--item-color-border);
+  } @else if $variant ==primary {
+    $background-color: var(--primary);
+    $text-color: var(--white);
+    $hover-color: var(--primary-hover);
+    $disabled-color: var(--primary-disabled);
+    $border-color: var(--primary-border);
+  } @else if $variant ==secondary {
+    $background-color: var(--secondary);
+    $text-color: var(--white);
+    $hover-color: var(--secondary-hover);
+    $disabled-color: var(--secondary-disabled);
+    $border-color: var(--secondary-border);
+  } @else if $variant ==tertiary {
+    $background-color: var(--tertiary);
+    $text-color: var(--glob-dark);
+    $hover-color: var(--tertiary-hover);
+    $disabled-color: var(--tertiary-disabled);
+    $border-color: var(--tertiary-border);
+  } @else if $variant ==success {
+    $background-color: var(--success);
+    $text-color: var(--white);
+    $hover-color: var(--success-hover);
+    $disabled-color: var(--success-disabled);
+    $border-color: var(--success-border);
+  } @else if $variant ==info {
+    $background-color: var(--info);
+    $text-color: var(--white);
+    $hover-color: var(--info-hover);
+    $disabled-color: var(--info-disabled);
+    $border-color: var(--info-border);
+  } @else if $variant ==warning {
+    $background-color: var(--warning);
+    $text-color: var(--white);
+    $hover-color: var(--warning-hover);
+    $disabled-color: var(--warning-disabled);
+    $border-color: var(--warning-border);
+  } @else if $variant ==danger {
+    $background-color: var(--danger);
+    $text-color: var(--white);
+    $hover-color: var(--danger-hover);
+    $disabled-color: var(--danger-disabled);
+    $border-color: var(--danger-border);
+  }
+
+  color: $text-color;
+  background-color: $background-color;
+  border-color: $border-color;
+  box-shadow: var(--button-shadow);
+
+  &:hover {
+    color: $text-color;
+    background-color: $hover-color;
+    border-color: $border-color;
+  }
+
+  &:focus {
+    box-shadow: boxShadow(focus, $variant);
+  }
+
+  &:disabled {
+    color: $text-color;
+    background-color: $disabled-color;
+    border-color: $border-color;
+  }
+}
+
+@mixin transformSvg($scale: 1.5) {
+  &:hover {
+    & > .svg-holder svg,
+    & > svg {
+      transition: 0.5s;
+      transform: scale($scale);
+    }
+  }
+}
+
+@mixin transformContainer($scale: 1.5) {
+  &:hover {
+    transition: 0.5s;
+    transform: scale($scale);
+    background-color: var(--snow-bg);
+    color: var(--item-color);
+  }
+}
+
+@mixin pickerGrid($repeat, $frames) {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat($repeat, $frames);
+  padding: 0.2rem;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    text-shadow: boxShadow(text);
+    transition: background-color 0.2s;
+    margin: px2rem(1);
+    padding: px2rem(5) 0;
+  }
+}
+
+@mixin floatingBox($top, $right, $bottom, $left) {
+  position: fixed;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  background-color: var(--bg-color);
+  text-align: center;
+  box-shadow: boxShadow();
+  z-index: 201;
+  padding: 0;
+
+  @include transformContainer(1.1);
+}
+
+@mixin textEllipsis($numLines: 1, $lineHeight: 1) {
+  overflow: hidden;
+  text-overflow: -o-ellipsis-lastline;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $numLines;
+  -webkit-box-orient: vertical;
+  line-height: $lineHeight;
+}
+
+@mixin personalDetailsBox() {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+
+  .section_title {
+    padding-left: px2rem(5);
+  }
+}
+
+@mixin verticalBar($thickness: 2) {
+  &::after {
+    content: '';
+    margin: px2rem(0) px2rem(5);
+    border-left: px2rem($thickness) solid var(--glob-dark);
+    height: px2rem(15);
+    align-self: center;
+  }
+}
