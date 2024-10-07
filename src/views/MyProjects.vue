@@ -1,13 +1,13 @@
 <script setup>
 import { ref } from 'vue'
-import { findWindowSize } from '@/utils/globals.js'
-import DeveloperTitle from '@/subviews/DeveloperTitle.vue'
-import MasterTemplate from '@/subviews/MasterTemplate.vue'
-import DeveloperPicture from '@/subviews/DeveloperPicture.vue'
-import DeveloperContact from '@/subviews/DeveloperContact.vue'
-import ProjectsGrid from '@/subviews//ProjectsGrid.vue'
-import useContactStore from '@/stores/contact.js'
-import useExperiencesStore from '@/stores/experiences'
+import { findWindowSize } from '@src/utils/globals.js'
+import DeveloperTitle from '@src/subviews/DeveloperTitle.vue'
+import MasterTemplate from '@src/subviews/MasterTemplate.vue'
+import DeveloperPicture from '@src/subviews/DeveloperPicture.vue'
+import DeveloperContact from '@src/subviews/DeveloperContact.vue'
+import ProjectsGrid from '@src/subviews//ProjectsGrid.vue'
+import useContactStore from '@src/stores/contact.js'
+import useExperiencesStore from '@src/stores/experiences'
 
 const contact = useContactStore()
 const devContact = contact.getContact

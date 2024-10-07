@@ -1,6 +1,6 @@
 <script setup>
 import { defineAsyncComponent, computed } from 'vue'
-import { classNames, px2rem } from '@/utils/globals.js'
+import { classNames, px2rem } from '@src/utils/globals.js'
 
 const props = defineProps({
   size: {
@@ -42,7 +42,7 @@ const props = defineProps({
 })
 
 const SvgIcon = defineAsyncComponent(() => {
-  return import(`@/assets/icons/${props.svgName}.svg`)
+  return import(`@src/assets/icons/${props.svgName}.svg`)
 })
 
 const sizes = ['x-large', 'large', 'medium', 'small', 'x-small']

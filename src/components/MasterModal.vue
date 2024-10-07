@@ -1,7 +1,7 @@
 <script setup>
 import { computed, ref, useSlots } from 'vue'
-import MasterIcon from '@/components/MasterIcon.vue'
-import { classNames } from '@/utils/globals'
+import MasterIcon from '@src/components/MasterIcon.vue'
+import { classNames } from '@src/utils/globals'
 
 const props = defineProps({
   triggerId: {

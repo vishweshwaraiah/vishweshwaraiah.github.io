@@ -1,15 +1,15 @@
 <script setup>
 import { ref } from 'vue'
-import { findWindowSize } from '@/utils/globals.js'
-import useExperiencesStore from '@/stores/experiences.js'
-import useAboutDevStore from '@/stores/aboutdev.js'
-import DeveloperTitle from '@/subviews/DeveloperTitle.vue'
-import MasterTemplate from '@/subviews/MasterTemplate.vue'
-import WorkExperience from '@/subviews/WorkExperience.vue'
-import DeveloperPicture from '@/subviews/DeveloperPicture.vue'
-import AboutDeveloper from '@/subviews/AboutDeveloper.vue'
-import PersonalDetails from '@/subviews/PersonalDetails.vue'
-import DutyRoles from '@/subviews/DutyRoles.vue'
+import { findWindowSize } from '@src/utils/globals.js'
+import useExperiencesStore from '@src/stores/experiences.js'
+import useAboutDevStore from '@src/stores/aboutdev.js'
+import DeveloperTitle from '@src/subviews/DeveloperTitle.vue'
+import MasterTemplate from '@src/subviews/MasterTemplate.vue'
+import WorkExperience from '@src/subviews/WorkExperience.vue'
+import DeveloperPicture from '@src/subviews/DeveloperPicture.vue'
+import AboutDeveloper from '@src/subviews/AboutDeveloper.vue'
+import PersonalDetails from '@src/subviews/PersonalDetails.vue'
+import DutyRoles from '@src/subviews/DutyRoles.vue'
 
 const aboutDev = useAboutDevStore()
 const aboutDevData = aboutDev.getAboutDev

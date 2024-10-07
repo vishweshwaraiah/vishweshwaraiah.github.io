@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
-import MasterIcon from '@/components/MasterIcon.vue'
-import ActionOutside from '@/utils/ActionOutside.js'
+import MasterIcon from '@src/components/MasterIcon.vue'
+import ActionOutside from '@src/utils/ActionOutside.js'
 
 defineProps({
   bodyComponent: {

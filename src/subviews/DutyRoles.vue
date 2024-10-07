@@ -1,8 +1,8 @@
 <script setup>
-import MasterIcon from '@/components/MasterIcon.vue'
-import MasterHrLine from '@/components/MasterHrLine.vue'
-import useResponsibilitiesStore from '@/stores/responsibilities.js'
-import MasterPrintBreak from '@/components/MasterPrintBreak.vue'
+import MasterIcon from '@src/components/MasterIcon.vue'
+import MasterHrLine from '@src/components/MasterHrLine.vue'
+import useResponsibilitiesStore from '@src/stores/responsibilities.js'
+import MasterPrintBreak from '@src/components/MasterPrintBreak.vue'
 
 const responsibilities = useResponsibilitiesStore()
 const devRnRs = responsibilities.getResponsibilities

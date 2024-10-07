@@ -1,9 +1,9 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import { fetchMstrMonth, classNames } from '@/utils/globals'
-import MasterIcon from '@/components/MasterIcon.vue'
-import MasterInput from '@/components/MasterInput.vue'
-import { monthObjects, dayStrings } from '@/utils/DateTime.js'
+import { fetchMstrMonth, classNames } from '@src/utils/globals'
+import MasterIcon from '@src/components/MasterIcon.vue'
+import MasterInput from '@src/components/MasterInput.vue'
+import { monthObjects, dayStrings } from '@src/utils/DateTime.js'
 
 const emits = defineEmits(['emitDateTime'])
 

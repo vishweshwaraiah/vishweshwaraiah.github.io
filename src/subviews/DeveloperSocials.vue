@@ -1,6 +1,6 @@
 <script setup>
-import MasterIcon from '@/components/MasterIcon.vue'
-import MasterHrLine from '@/components/MasterHrLine.vue'
+import MasterIcon from '@src/components/MasterIcon.vue'
+import MasterHrLine from '@src/components/MasterHrLine.vue'
 
 defineProps({
   devSocials: {

@@ -1,6 +1,6 @@
 <script setup>
-import useExperiencesStore from '@/stores/experiences.js'
-import { getYearsFromDateList } from '@/utils/globals.js'
+import useExperiencesStore from '@src/stores/experiences.js'
+import { getYearsFromDateList } from '@src/utils/globals.js'
 
 defineProps({
   prepend: {

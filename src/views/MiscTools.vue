@@ -1,7 +1,7 @@
 <script setup>
-import RootTemplate from '@/subviews/RootTemplate.vue'
-import RentReciepts from '@/subviews/RentReciepts.vue'
-import useRentDataStore from '@/stores/rentreciepts.js'
+import RootTemplate from '@src/subviews/RootTemplate.vue'
+import RentReciepts from '@src/subviews/RentReciepts.vue'
+import useRentDataStore from '@src/stores/rentreciepts.js'
 
 const rent_data = useRentDataStore()
 const rentData = rent_data.getRentData

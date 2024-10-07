@@ -1,11 +1,11 @@
-import '@/assets/index.scss'
-import '@/utils/prototypes.js'
+import '@src/assets/index.scss'
+import '@src/utils/prototypes.js'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
-import App from '@/App.vue'
-import router from '@/router'
+import App from '@src/App.vue'
+import router from '@src/router'
 
 import DisableDevtool from 'disable-devtool'
 

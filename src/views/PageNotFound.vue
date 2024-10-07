@@ -1,7 +1,7 @@
 <script setup>
 import { useRouter } from 'vue-router'
-import MasterIcon from '@/components/MasterIcon.vue'
-import MasterButton from '@/components/MasterButton.vue'
+import MasterIcon from '@src/components/MasterIcon.vue'
+import MasterButton from '@src/components/MasterButton.vue'
 
 const router = useRouter()
 

@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import { classNames } from '@/utils/globals.js'
+import { classNames } from '@src/utils/globals.js'
 
 const props = defineProps({
   textContent: {

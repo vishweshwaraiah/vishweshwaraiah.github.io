@@ -64,7 +64,7 @@
 </template>
 <script setup>
 import { computed } from 'vue'
-import { RemoveMultiSpaces } from '@/utils/globals'
+import { RemoveMultiSpaces } from '@src/utils/globals'
 const props = defineProps({
   titleText: {
     default: 'Loading...',

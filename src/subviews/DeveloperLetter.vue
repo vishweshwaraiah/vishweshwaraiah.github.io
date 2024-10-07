@@ -1,10 +1,10 @@
 <script setup>
 import { ref } from 'vue'
-import MasterHrLine from '@/components/MasterHrLine.vue'
-import MasterIcon from '@/components/MasterIcon.vue'
-import MasterPrintBreak from '@/components/MasterPrintBreak.vue'
-import TotalExperience from '@/subviews/TotalExperience.vue'
-import useCoverLetterStore from '@/stores/coverletter.js'
+import MasterHrLine from '@src/components/MasterHrLine.vue'
+import MasterIcon from '@src/components/MasterIcon.vue'
+import MasterPrintBreak from '@src/components/MasterPrintBreak.vue'
+import TotalExperience from '@src/subviews/TotalExperience.vue'
+import useCoverLetterStore from '@src/stores/coverletter.js'
 
 const sectionTitle = 'Cover Letter'
 

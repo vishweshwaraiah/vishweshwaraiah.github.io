@@ -52,7 +52,7 @@
 </template>
 <script setup>
 import { ref } from 'vue'
-import { monthObjects } from '@/constants/DateTime'
+import { monthObjects } from '@src/constants/DateTime'
 
 const props = defineProps({
   format: {

@@ -1,7 +1,7 @@
 <script setup>
-import MasterIcon from '@/components/MasterIcon.vue'
-import MasterHrLine from '@/components/MasterHrLine.vue'
-import TotalExperience from '@/subviews/TotalExperience.vue'
+import MasterIcon from '@src/components/MasterIcon.vue'
+import MasterHrLine from '@src/components/MasterHrLine.vue'
+import TotalExperience from '@src/subviews/TotalExperience.vue'
 
 defineProps({
   content: {

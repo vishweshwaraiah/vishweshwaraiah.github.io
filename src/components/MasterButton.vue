@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue'
-import { classNames } from '@/utils/globals'
+import { classNames } from '@src/utils/globals'
 
 const props = defineProps({
   type: {

@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import MyPortfolio from '@/views/MyPortfolio.vue'
-import MyResume from '@/views/MyResume.vue'
-import MyProjects from '@/views/MyProjects.vue'
-import CoverLetter from '@/views/CoverLetter.vue'
-import PageNotFound from '@/views/PageNotFound.vue'
-import AboutDev from '@/views/AboutDev.vue'
-import ContactMe from '@/views/ContactMe.vue'
-import MiscTools from '@/views/MiscTools.vue'
+import MyPortfolio from '@src/views/MyPortfolio.vue'
+import MyResume from '@src/views/MyResume.vue'
+import MyProjects from '@src/views/MyProjects.vue'
+import CoverLetter from '@src/views/CoverLetter.vue'
+import PageNotFound from '@src/views/PageNotFound.vue'
+import AboutDev from '@src/views/AboutDev.vue'
+import ContactMe from '@src/views/ContactMe.vue'
+import MiscTools from '@src/views/MiscTools.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

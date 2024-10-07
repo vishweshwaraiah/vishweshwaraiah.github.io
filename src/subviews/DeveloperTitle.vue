@@ -1,5 +1,5 @@
 <script setup>
-import TotalExperience from '@/subviews/TotalExperience.vue'
+import TotalExperience from '@src/subviews/TotalExperience.vue'
 
 defineProps({
   title: {

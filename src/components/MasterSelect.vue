@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed, watchEffect, onMounted } from 'vue'
-import { RemoveMultiSpaces } from '@/utils/globals'
-import MasterIcon from '@/components/MasterIcon.vue'
+import { RemoveMultiSpaces } from '@src/utils/globals'
+import MasterIcon from '@src/components/MasterIcon.vue'
 
 const emits = defineEmits(['emitSelected'])
 

@@ -1,6 +1,6 @@
 <script setup>
-import DeveloperPicture from '@/subviews/DeveloperPicture.vue'
-import RootTemplate from '@/subviews/RootTemplate.vue'
+import DeveloperPicture from '@src/subviews/DeveloperPicture.vue'
+import RootTemplate from '@src/subviews/RootTemplate.vue'
 
 const contact = '+91-7353333573'
 </script>

@@ -18,7 +18,7 @@
 </template>
 <script setup>
 import { ref, watchEffect, onMounted } from 'vue'
-import MasterIcon from '@/components/MasterIcon.vue'
+import MasterIcon from '@src/components/MasterIcon.vue'
 
 const props = defineProps({
   dataObj: {
