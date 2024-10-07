@@ -8,10 +8,16 @@ export default defineConfig({
   base: './',
   plugins: [vue(), svgLoader()],
   resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
-      '@root': fileURLToPath(new URL('./', import.meta.url))
-    }
+    alias: [
+      {
+        find: '@',
+        replacement: fileURLToPath(new URL('./src', import.meta.url))
+      },
+      {
+        find: '@root',
+        replacement: fileURLToPath(new URL('./', import.meta.url))
+      }
+    ]
   },
   css: {
     preprocessorOptions: {
