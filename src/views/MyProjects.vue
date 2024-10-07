@@ -19,7 +19,7 @@ const subTitle = 'Senior Fullstack Developer'
 const devTitle = 'Vishweshwarayya K J'
 const sectionTitle = 'Projects'
 
-let devPicWidth = ref('')
+const devPicWidth = ref('')
 const device = findWindowSize()
 if (device === 'mobile') {
   devPicWidth.value = '50vw'

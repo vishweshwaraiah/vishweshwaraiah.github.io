@@ -30,7 +30,7 @@ const calcRange = () => {
   const startDate = dateSelected.value
   if (startDate && numCount) {
     const selectedMonth = toUTCDate(startDate).getUTCMonth() + 1
-    let selectedYear = toUTCDate(startDate).getUTCFullYear()
+    const selectedYear = toUTCDate(startDate).getUTCFullYear()
     const dates = []
     for (let i = 0; i < numCount; i++) {
       dates.push(selectedMonth + i)

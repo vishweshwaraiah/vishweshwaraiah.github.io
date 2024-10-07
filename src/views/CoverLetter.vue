@@ -14,7 +14,7 @@ const devContact = contact.getContact
 const subTitle = 'Senior Fullstack Developer'
 const devTitle = 'Vishweshwarayya K J'
 
-let devPicWidth = ref('')
+const devPicWidth = ref('')
 const device = findWindowSize()
 if (device === 'mobile') {
   devPicWidth.value = '50vw'

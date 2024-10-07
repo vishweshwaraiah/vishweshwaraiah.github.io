@@ -313,7 +313,7 @@ export const openLink = (link) => {
 }
 
 export const classNames = (clsArray) => {
-  let defCls = ''
+  const defCls = ''
 
   if (!clsArray.length) return defCls
 
@@ -380,12 +380,13 @@ export const monthsCount = (d1, d2) => {
 }
 
 export const dateDiffer = (props) => {
-  let { from, to, format = 'YMD' } = props
+  const { from, to, format = 'YMD' } = props
+  let toDate = to
   let startDate = new Date(new Date(from).toISOString().slice(0, 10))
-  if (!to) {
-    to = new Date().toISOString().slice(0, 10) // get date in YYYY-MM-DD format
+  if (!toDate) {
+    toDate = new Date().toISOString().slice(0, 10) // get date in YYYY-MM-DD format
   }
-  let endDate = new Date(to)
+  let endDate = new Date(toDate)
   if (startDate > endDate) {
     const swap = startDate
     startDate = endDate

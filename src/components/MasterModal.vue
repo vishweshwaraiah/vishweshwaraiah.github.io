@@ -55,7 +55,7 @@ const footerSlot = computed(() => {
 })
 
 const triggerClasses = computed(() => {
-  let classList = ['modal_trigger']
+  const classList = ['modal_trigger']
   if (props.btnClasses) {
     classList.push(props.btnClasses)
   }
