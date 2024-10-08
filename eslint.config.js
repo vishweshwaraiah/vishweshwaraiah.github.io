@@ -21,5 +21,8 @@ export default [
       'prefer-const': 'warn',
       'no-constant-binary-expression': 'error'
     }
+  },
+  {
+    ignores: ['**/*.html', 'node_modules/*', 'build/*', 'dist/*', 'coverage/*']
   }
 ]
