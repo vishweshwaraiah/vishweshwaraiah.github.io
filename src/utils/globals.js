@@ -325,8 +325,19 @@ export const classNames = (clsArray) => {
   return classes
 }
 
-export const monthsToYears = (months) => {
-  return Math.floor(months / 12) + ' years and ' + (months % 12) + ' months'
+export const monthsToYears = (totalMonths) => {
+  let months = 0
+  let yearStr = '0 Years'
+  if (totalMonths > 0) {
+    yearStr = Math.floor(totalMonths / 12) + ' Years'
+    months = totalMonths % 12
+  }
+
+  if (months > 0) {
+    yearStr = yearStr + ' and ' + months + ' Months'
+  }
+
+  return yearStr
 }
 
 export const toUTCDate = (dateStr) => {
