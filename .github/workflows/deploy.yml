@@ -11,21 +11,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: 🛎️ Checkout repo
         uses: actions/checkout@v4.2.0
 
-      - name: Setup Node
+      - name: 📦 Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 21
 
-      - name: Install dependencies
+      - name: 📥 Install dependencies
         uses: bahmutov/npm-install@v1.10.3
 
-      - name: Build project
+      - name: 🏗️ Build project
         run: npm run build
 
-      - name: Upload production-ready build files
+      - name: 🎉 Upload production-ready build files
         uses: actions/upload-artifact@v4
         with:
           name: production-files
@@ -38,13 +38,13 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
-      - name: Download artifact
+      - name: 🛠️ Download artifact
         uses: actions/download-artifact@v4
         with:
           name: production-files
           path: ./dist
 
-      - name: Deploy to GitHub Pages
+      - name: 🚀 Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
