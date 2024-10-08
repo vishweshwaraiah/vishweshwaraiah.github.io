@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { classNames } from '@src/utils/globals.js'
-import placeholder from '@src/assets/images/placeholder.jpg'
+import placeholder from '@assets/images/placeholder.jpg'
 
 const props = defineProps({
   image: {

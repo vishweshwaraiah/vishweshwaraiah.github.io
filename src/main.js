@@ -1,4 +1,4 @@
-import '@src/assets/index.scss'
+import '@assets/index.scss'
 import '@src/utils/prototypes.js'
 
 import { createApp } from 'vue'

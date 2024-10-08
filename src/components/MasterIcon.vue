@@ -42,7 +42,7 @@ const props = defineProps({
 })
 
 const SvgIcon = defineAsyncComponent(() => {
-  return import(`@src/assets/icons/${props.svgName}.svg`)
+  return import(`@assets/icons/${props.svgName}.svg`)
 })
 
 const sizes = ['x-large', 'large', 'medium', 'small', 'x-small']
