@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "disable-devtool": "^0.3.8",
-    "fs-extra": "^11.2.0",
     "pinia": "^2.2.4",
     "vishweshwaraiah.github.io": "file:",
     "vue": "^3.4.38",
