@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "start": "vite",
-    "build": "vite build && cp index.html 404.html",
+    "clean": "rimraf ./node_modules",
+    "clean:dist": "rimraf ./dist",
+    "build": "vite build && cd ./dist && copy index.html 404.html",
     "preview": "vite preview",
     "test:unit": "vitest",
     "lint": "eslint . --fix",
@@ -14,6 +16,7 @@
   },
   "dependencies": {
     "disable-devtool": "^0.3.8",
+    "fs-extra": "^11.2.0",
     "pinia": "^2.2.4",
     "vishweshwaraiah.github.io": "file:",
     "vue": "^3.4.38",
@@ -31,6 +34,7 @@
     "husky": "^9.1.6",
     "jsdom": "^25.0.1",
     "prettier": "^3.3.3",
+    "rimraf": "^5.0.10",
     "sass": "^1.79.4",
     "vite": "^5.4.8",
     "vite-svg-loader": "^5.1.0",
