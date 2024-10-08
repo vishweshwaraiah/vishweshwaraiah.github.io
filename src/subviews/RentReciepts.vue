@@ -2,11 +2,11 @@
 import { ref } from 'vue'
 import { toUTCDate, fetchMstrMonth } from '@src/utils/globals.js'
 import { monthObjects } from '@src/utils/DateTime.js'
-import MasterInput from '@src/components/MasterInput.vue'
-import MasterPicker from '@src/components/MasterPicker.vue'
-import MasterButton from '@src/components/MasterButton.vue'
-import MasterNotifier from '@src/components/MasterNotifier.vue'
-import MasterPrintBreak from '@src/components/MasterPrintBreak.vue'
+import MasterInput from '@components/MasterInput.vue'
+import MasterPicker from '@components/MasterPicker.vue'
+import MasterButton from '@components/MasterButton.vue'
+import MasterNotifier from '@components/MasterNotifier.vue'
+import MasterPrintBreak from '@components/MasterPrintBreak.vue'
 
 defineProps({
   rentData: {

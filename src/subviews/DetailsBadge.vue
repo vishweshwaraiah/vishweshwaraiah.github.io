@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import MasterIcon from '@src/components/MasterIcon.vue'
+import MasterIcon from '@components/MasterIcon.vue'
 import { classNames } from '@src/utils/globals.js'
 
 const props = defineProps({

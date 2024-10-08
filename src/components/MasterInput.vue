@@ -1,6 +1,6 @@
 <script setup>
 import { computed, ref } from 'vue'
-import MasterIcon from '@src/components/MasterIcon.vue'
+import MasterIcon from '@components/MasterIcon.vue'
 import { classNames } from '@src/utils/globals'
 
 const emits = defineEmits(['update:inputValue', 'onFocus', 'onBlur', 'onInputClear'])

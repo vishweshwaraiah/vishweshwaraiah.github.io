@@ -6,9 +6,9 @@ import { linkedIn, github, themesList } from '@src/utils/constants.js'
 import useSkillsStore from '@src/stores/skills.js'
 import DeveloperPicture from '@src/subviews/DeveloperPicture.vue'
 import RootTemplate from '@src/subviews/RootTemplate.vue'
-import MasterButton from '@src/components/MasterButton.vue'
-import MasterAnimate from '@src/components/MasterAnimate.vue'
-import MasterIcon from '@src/components/MasterIcon.vue'
+import MasterButton from '@components/MasterButton.vue'
+import MasterAnimate from '@components/MasterAnimate.vue'
+import MasterIcon from '@components/MasterIcon.vue'
 
 const currentTheme = ref('default')
 const isOpen = ref(false)

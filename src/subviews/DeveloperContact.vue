@@ -1,7 +1,7 @@
 <script setup>
-import MasterIcon from '@src/components/MasterIcon.vue'
-import MasterHrLine from '@src/components/MasterHrLine.vue'
-import MasterPrintBreak from '@src/components/MasterPrintBreak.vue'
+import MasterIcon from '@components/MasterIcon.vue'
+import MasterHrLine from '@components/MasterHrLine.vue'
+import MasterPrintBreak from '@components/MasterPrintBreak.vue'
 
 defineProps({
   devContact: {

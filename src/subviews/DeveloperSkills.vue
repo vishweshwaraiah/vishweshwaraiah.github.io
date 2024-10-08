@@ -1,6 +1,6 @@
 <script setup>
-import MasterIcon from '@src/components/MasterIcon.vue'
-import MasterHrLine from '@src/components/MasterHrLine.vue'
+import MasterIcon from '@components/MasterIcon.vue'
+import MasterHrLine from '@components/MasterHrLine.vue'
 import DetailsBadge from '@src/subviews/DetailsBadge.vue'
 
 defineProps({

@@ -1,7 +1,7 @@
 <script setup>
 import DetailsBadge from '@src/subviews/DetailsBadge.vue'
-import MasterIcon from '@src/components/MasterIcon.vue'
-import MasterHrLine from '@src/components/MasterHrLine.vue'
+import MasterIcon from '@components/MasterIcon.vue'
+import MasterHrLine from '@components/MasterHrLine.vue'
 
 const props = defineProps({
   orgsList: {

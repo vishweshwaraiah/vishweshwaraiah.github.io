@@ -45,7 +45,7 @@
 </template>
 <script setup>
 import { ref } from 'vue'
-import MasterIcon from '@src/components/MasterIcon.vue'
+import MasterIcon from '@components/MasterIcon.vue'
 const props = defineProps({
   description: {
     default: '',

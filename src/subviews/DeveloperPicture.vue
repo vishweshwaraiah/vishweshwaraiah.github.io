@@ -1,7 +1,7 @@
 <script setup>
 import { classNames } from '@src/utils/globals.js'
-import MasterIcon from '@src/components/MasterIcon.vue'
-import MasterImage from '@src/components/MasterImage.vue'
+import MasterIcon from '@components/MasterIcon.vue'
+import MasterImage from '@components/MasterImage.vue'
 import DevPic from '@assets/images/vishu.png'
 
 const props = defineProps({

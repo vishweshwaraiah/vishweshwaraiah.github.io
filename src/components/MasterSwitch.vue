@@ -1,7 +1,7 @@
 <script setup>
 import { computed, ref } from 'vue'
 import { RemoveMultiSpaces } from '@src/utils/globals'
-import MasterIcon from '@src/components/MasterIcon.vue'
+import MasterIcon from '@components/MasterIcon.vue'
 
 const emits = defineEmits(['update:inputValue'])
 
