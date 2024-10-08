@@ -23,7 +23,7 @@ jobs:
         uses: bahmutov/npm-install@v1.10.3
 
       - name: Build project
-        run: npm run build
+        run: npm run build && cp index.html 404.html
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v4
